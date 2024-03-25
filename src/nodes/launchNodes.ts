@@ -2,10 +2,10 @@ import { Value } from "../types";
 import { node } from "./node";
 
 export async function launchNodes(
-  N: number, // total number of nodes in the network
-  F: number, // number of faulty nodes in the network
-  initialValues: Value[], // initial values of each node
-  faultyList: boolean[] // list of faulty values for each node, true if the node is faulty, false otherwise
+  N: number, 
+  F: number, 
+  initialValues: Value[], 
+  faultyList: boolean[]
 ) {
   if (initialValues.length !== faultyList.length || N !== initialValues.length)
     throw new Error("Arrays don't match");
